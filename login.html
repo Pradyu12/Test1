@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Hanuman Sports</title>
+        <meta name="theme-color" content="#00F0FF">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="logo.png" sizes="192x192">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -161,8 +165,6 @@
             font-size: 1rem;
         }
 
-
-
         /* Email icon (left icon of the two) */
         .icon-email {
             right: 45px;
@@ -211,36 +213,30 @@
         }
 
         .btn {
-            display: inline-block;
-            background-color: rgba(0, 240, 255, 0.75);
-            /* cyan */
-            color: var(--white);
-            padding: 1rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            border: 2px solid transparent;
-            transition: all 0.3s;
-            cursor: pointer;
             width: 100%;
-            font-size: 1rem;
+            padding: 1rem;
+            border-radius: 30px;
+            border: 1px solid var(--primary);
+            background: rgba(0, 240, 255, 0.15);
+            color: var(--primary);
             font-family: 'Orbitron', sans-serif;
             letter-spacing: 1px;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 0 8px rgba(0, 240, 255, 0.25);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
         }
 
         .btn:hover {
-            background: transparent;
-            border: 2px solid var(--accent);
-            color: var(--accent);
-            box-shadow: 0 0 12px rgba(0, 240, 255, 0.5);
+            background: var(--primary);
+            color: #000;
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.8);
             transform: translateY(-3px);
         }
 
-
         .register-link {
             text-align: center;
+            margin-top: 2rem;
             color: var(--gray);
         }
 
@@ -440,7 +436,7 @@
                     <label for="remember">Remember me</label>
                 </div>
                 <div class="forgot-password">
-                    <a href="forget_password.html" title="Recover your password">Forgot password?</a>
+                    <a href="forget-password.html" title="Recover your password">Forgot password?</a>
                 </div>
             </div>
 
@@ -460,50 +456,7 @@
             </div>
         </div>
     </div>
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const form = document.getElementById("loginForm");
-        const popup = document.getElementById("loginPopup");
 
-        console.log("Page Loaded. Form found:", !!form);
-
-        form.addEventListener("submit", async function (e) {
-            e.preventDefault();
-            console.log("Button clicked! Attempting login...");
-
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-
-            try {
-                const response = await fetch('http://localhost:3000/api/auth/login', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email, password })
-                });
-
-                console.log("Response status:", response.status);
-                const data = await response.json();
-
-                if (response.ok) {
-                    console.log("Login success! Role:", data.role);
-                    localStorage.setItem('token', data.token);
-                    localStorage.setItem('role', data.role);
-                    
-                    popup.classList.add("active");
-
-                    setTimeout(() => {
-                        window.location.href = (data.role === 'admin') ? 'admin.html' : 'profile.html';
-                    }, 2000);
-                } else {
-                    alert("Error: " + data.message);
-                }
-            } catch (err) {
-                console.error("Connection Failed:", err);
-                alert("Server is not responding. Is node server.js running?");
-            }
-        });
-    });
-</script>
     <!-- LOGIN SUCCESS POPUP -->
     <div id="loginPopup" class="popup-overlay">
         <div class="popup-box">
@@ -512,8 +465,66 @@
             <p>Welcome back to Hanuman Sports</p>
         </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("loginForm");
+            const popup = document.getElementById("loginPopup");
 
+            console.log("Page Loaded. Form found:", !!form);
 
+            form.addEventListener("submit", async function (e) {
+                e.preventDefault();
+                console.log("Button clicked! Attempting login...");
+
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+
+                try {
+                    const response = await fetch('http://localhost:3000/api/auth/login', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ email, password })
+                    });
+
+                    console.log("Response status:", response.status);
+                    const data = await response.json();
+
+                    if (response.ok) {
+                        console.log("Login success! Role:", data.role);
+                        localStorage.setItem('token', data.token);
+                        localStorage.setItem('role', data.role);
+
+                        popup.classList.add("active");
+
+                        setTimeout(() => {
+                            window.location.href = (data.role === 'admin') ? 'admin.html' : 'profile.html';
+                        }, 2000);
+                    } else {
+                        alert("Error: " + data.message);
+                    }
+                } catch (err) {
+                    console.error("Connection Failed:", err);
+                    toastInfo('Notice', 'Server is not responding. Is node server.js running?');
+                }
+            });
+        });
+
+        const togglePassword = document.getElementById("togglePassword");
+        const passwordField = document.getElementById("password");
+
+        togglePassword.addEventListener("click", function () {
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                this.classList.remove("fa-eye");
+                this.classList.add("fa-eye-slash");
+            } else {
+                passwordField.type = "password";
+                this.classList.remove("fa-eye-slash");
+                this.classList.add("fa-eye");
+            }
+        });
+    </script>
+    <script src="hs-utils.js"></script>
 </body>
 
 </html>
