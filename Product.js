@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
-const { sequelize } = require('../config/db');
+const { sequelize } = require('../config/db'); // Destructure sequelize here
 
-module.exports = sequelize.define('Product', {
+const Product = sequelize.define('Product', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
     name: { type: DataTypes.STRING, allowNull: false },
     category: { type: DataTypes.STRING },
@@ -9,3 +9,5 @@ module.exports = sequelize.define('Product', {
     stock: { type: DataTypes.INTEGER, defaultValue: 0 },
     image: { type: DataTypes.STRING }
 });
+
+module.exports = Product;

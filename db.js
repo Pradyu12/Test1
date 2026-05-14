@@ -1,19 +1,24 @@
-const mysql = require('mysql2');
+const { Sequelize } = require('sequelize');
+require('dotenv').config();
 
-const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'prado',
-    password: 'pradyu2916', // Update this to your actual password
-    database: 'prado_db',
-    port: 3306 // Use 3306 based on your DBeaver screenshot
-});
-
-db.connect((err) => {
-    if (err) {
-        console.error('❌ Database connection failed:', err.message);
-        return;
+const sequelize = new Sequelize(
+    process.env.DB_NAME, 
+    process.env.DB_USER, 
+    process.env.DB_PASSWORD, 
+    {
+        host: process.env.DB_HOST,
+        dialect: 'mysql',
+        port: 3306
     }
-    console.log('✅ Connected to Prado Database');
-});
+);
 
-module.exports = db;
+const connectDB = async () => {
+    try {
+        await sequelize.authenticate();
+        console.log('✅ MySQL Connected via Sequelize');
+    } catch (error) {
+        console.error('❌ Connection error:', error);
+    }
+};
+
+module.exports = { sequelize, connectDB };

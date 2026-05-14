@@ -1,13 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const Product = require('../models/Product');
+// Fix: Ensure path is relative to the 'routes' folder and matches filename case
+const Product = require('../models/Product'); 
 
-// Fetch all sports products for the shop
 router.get('/', async (req, res) => {
     try {
-        const products = await Product.find();
+        // Use Sequelize method
+        const products = await Product.findAll(); 
         res.json(products);
     } catch (err) {
+        console.error("Product Fetch Error:", err);
         res.status(500).json({ msg: "Server Error" });
     }
 });
