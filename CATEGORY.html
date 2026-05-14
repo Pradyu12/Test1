@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="theme-color" content="#00F0FF">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="icon" href="https://pngfre.com/wp-content/uploads/hanuman-36-281x300.png" sizes="192x192">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.png" sizes="192x192">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary: #00F0FF;
@@ -26,7 +29,7 @@
             --glass: rgba(255, 255, 255, 0.1);
             --glass-border: rgba(255, 255, 255, 0.2);
             --neon-shadow: 0 0 10px rgba(0, 240, 255, 0.7);
-            --primary-shadow: 0 0 18px rgba(0,240,255,0.6);
+            --primary-shadow: 0 0 18px rgba(0, 240, 255, 0.6);
         }
 
         * {
@@ -43,7 +46,12 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Orbitron', sans-serif;
             letter-spacing: 1px;
         }
@@ -185,7 +193,7 @@
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 10px rgba(0,240,255, 0.3);
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
         }
 
         .logo-text p {
@@ -332,8 +340,8 @@
 
         /* Hero Section */
         .category-hero {
-            background: linear-gradient(rgba(10, 14, 23, 0.7), rgba(10, 14, 23, 0.9)), 
-                        url('https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background: linear-gradient(rgba(10, 14, 23, 0.7), rgba(10, 14, 23, 0.9)),
+                url('https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -369,7 +377,7 @@
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 15px rgba(0,240,255,0.6);
+            text-shadow: 0 0 15px rgba(0, 240, 255, 0.6);
             animation: glow 2s infinite alternate;
         }
 
@@ -377,6 +385,7 @@
             from {
                 text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
             }
+
             to {
                 text-shadow: 0 0 20px rgba(0, 240, 255, 0.8), 0 0 30px rgba(0, 240, 255, 0.6);
             }
@@ -402,7 +411,7 @@
             cursor: pointer;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 0 8px rgba(0,240,255,0.25);
+            box-shadow: 0 0 8px rgba(0, 240, 255, 0.25);
             font-family: 'Orbitron', sans-serif;
             letter-spacing: 1px;
         }
@@ -420,9 +429,9 @@
         }
 
         .btn:hover {
-            background-color: rgba(0,240,255,0.85);
+            background-color: rgba(0, 240, 255, 0.85);
             transform: translateY(-3px);
-            box-shadow: 0 0 20px rgba(0,240,255,0.6);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.6);
         }
 
         .btn:hover::before {
@@ -439,7 +448,7 @@
         .btn-outline:hover {
             background: var(--primary);
             color: #000;
-            box-shadow: 0 0 25px rgba(0,240,255,0.8);
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.8);
         }
 
         /* Section Styles */
@@ -503,14 +512,16 @@
             background: var(--primary);
             border-color: var(--primary);
             transform: translateY(-3px);
-            color: #000000; /* BLACK text on hover */
+            color: #000000;
+            /* BLACK text on hover */
         }
 
         .filter-btn.active {
             background: var(--primary);
             border-color: var(--primary);
             box-shadow: var(--primary-shadow);
-            color: #000000; /* BLACK text when active */
+            color: #000000;
+            /* BLACK text when active */
         }
 
         /* Category Grid */
@@ -553,7 +564,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.5));
+            background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.5));
             pointer-events: none;
         }
 
@@ -623,9 +634,11 @@
             0% {
                 transform: translate(0, 0) rotate(0deg);
             }
+
             50% {
                 transform: translate(50vw, 50vh) rotate(180deg);
             }
+
             100% {
                 transform: translate(0, 0) rotate(360deg);
             }
@@ -687,14 +700,14 @@
             border-radius: 15px;
             padding: 1rem 1.5rem;
             text-align: center;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
             border: 1px solid var(--glass-border);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .feature-card:hover {
             transform: translateY(-8px) scale(1.03);
-            box-shadow: 0 16px 32px rgba(0,0,0,0.22);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.22);
         }
 
         .feature-icon {
@@ -712,7 +725,7 @@
         }
 
         .feature-card p {
-            color: rgba(255,255,255,0.8);
+            color: rgba(255, 255, 255, 0.8);
             font-size: 1rem;
         }
 
@@ -827,6 +840,40 @@
             font-size: 0.9rem;
         }
 
+        /* Floating Elements */
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .floating-element {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(0, 240, 255, 0.1);
+            filter: blur(30px);
+            animation: float 15s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            50% {
+                transform: translate(50vw, 50vh) rotate(180deg);
+            }
+
+            100% {
+                transform: translate(0, 0) rotate(360deg);
+            }
+        }
+
         /* Back to Top Button */
         .back-to-top {
             position: fixed;
@@ -846,7 +893,7 @@
             visibility: hidden;
             transition: all 0.3s;
             z-index: 999;
-            box-shadow: 0 5px 20px rgba(0,240,255, 0.5);
+            box-shadow: 0 5px 20px rgba(0, 240, 255, 0.5);
         }
 
         .back-to-top.active {
@@ -856,7 +903,7 @@
 
         .back-to-top:hover {
             background: var(--accent);
-            box-shadow: 0 0 18px rgba(0,240,255,0.6);
+            box-shadow: 0 0 18px rgba(0, 240, 255, 0.6);
             transform: translateY(-5px);
         }
 
@@ -930,7 +977,7 @@
 
         #search-input:focus {
             border-color: var(--primary);
-            box-shadow: 0 0 15px rgba(0,240,255, 0.3);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
         }
 
         #search-form button {
@@ -1191,30 +1238,6 @@
             backdrop-filter: blur(5px);
         }
 
-        /* Add to Cart Notification */
-        .add-to-cart-notification {
-            position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0,240,255,0.85);
-            color: #000;
-            padding: 15px 25px;
-            border-radius: 50px;
-            box-shadow: 0 0 20px rgba(0,240,255,0.5);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            opacity: 0;
-            transition: 0.3s;
-            z-index: 3000;
-        }
-
-        .add-to-cart-notification.show {
-            opacity: 1;
-            transform: translateX(-50%) translateY(-10px);
-        }
-
         /* Responsive Styles */
         @media (max-width: 1200px) {
             .category-hero h1 {
@@ -1226,7 +1249,7 @@
             .category-hero {
                 padding: 6rem 1rem;
             }
-            
+
             .section {
                 padding: 4rem 1rem;
             }
@@ -1322,19 +1345,129 @@
             .search-container {
                 padding: 2rem 1.5rem;
             }
-            
+
             .cart-sidebar {
                 max-width: 100%;
             }
         }
+
+        /* ===== GLOBAL BUTTON UPGRADE (ALL BUTTONS) ===== */
+
+        /* Base button style */
+        .btn,
+        .btn-outline,
+        .filter-btn,
+        .view-btn,
+        .nav-links a {
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(6px);
+        }
+
+        /* Glow effect base */
+        .btn::before,
+        .btn-outline::before,
+        .filter-btn::before,
+        .view-btn::before,
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        /* Hover glow animation */
+        .btn:hover::before,
+        .btn-outline:hover::before,
+        .filter-btn:hover::before,
+        .view-btn:hover::before,
+        .nav-links a:hover::before {
+            left: 100%;
+        }
+
+        /* ===== PRIMARY BUTTON (CYAN GLOW) ===== */
+        .btn,
+        .nav-links a.active {
+            background: rgba(0, 240, 255, 0.15);
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+        }
+
+        .btn:hover,
+        .nav-links a:hover {
+            background: var(--primary);
+            color: #000;
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.8);
+            transform: translateY(-3px);
+        }
+
+        /* ===== OUTLINE BUTTON ===== */
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: #000;
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.8);
+        }
+
+        /* ===== FILTER BUTTON ===== */
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            color: var(--white);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary);
+            color: #000;
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.6);
+        }
+        
+        /* ===== VIEW BUTTON (GRID/LIST) ===== */
+        .view-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            color: var(--white);
+        }
+
+        .view-btn:hover,
+        .view-btn.active {
+            background: var(--primary);
+            color: #000;
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.6);
+        }
+
+        /* ===== ICON COLOR FIX ===== */
+        .nav-links a i {
+            color: var(--primary);
+        }
+
+        .nav-links a:hover i {
+            color: #000;
+        }
     </style>
 </head>
+
 <body>
     <!-- Floating Background Elements -->
     <div class="floating-elements">
         <div class="floating-element" style="width: 300px; height: 300px; top: 10%; left: 5%;"></div>
-        <div class="floating-element" style="width: 400px; height: 400px; bottom: 15%; right: 10%; animation-delay: 3s;"></div>
-        <div class="floating-element" style="width: 250px; height: 250px; top: 50%; left: 30%; animation-delay: 5s;"></div>
+        <div class="floating-element"
+            style="width: 400px; height: 400px; bottom: 15%; right: 10%; animation-delay: 3s;"></div>
+        <div class="floating-element" style="width: 250px; height: 250px; top: 50%; left: 30%; animation-delay: 5s;">
+        </div>
     </div>
 
     <!-- Top Bar -->
@@ -1376,7 +1509,7 @@
 
                 <div class="header-icons">
                     <a href="#" id="search-btn" aria-label="Search products"><i class="fas fa-search"></i></a>
-                    
+
                     <!-- PROFILE DROPDOWN START -->
                     <div class="profile-dropdown">
                         <a href="#" id="profile-btn"><i class="fas fa-user"></i></a>
@@ -1389,7 +1522,8 @@
                     </div>
                     <!-- PROFILE DROPDOWN END -->
 
-                    <a href="#" id="cart-btn" aria-label="Shopping cart"><i class="fas fa-shopping-cart"></i><span>0</span></a>
+                    <a href="#" id="cart-btn" aria-label="Shopping cart"><i
+                            class="fas fa-shopping-cart"></i><span>0</span></a>
                 </div>
 
                 <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle mobile menu">
@@ -1403,7 +1537,8 @@
     <section class="category-hero">
         <div class="category-hero-content">
             <h1>Explore Our Categories</h1>
-            <p>Discover premium sports equipment across all categories. Find everything you need to elevate your game, from professional gear to training essentials.</p>
+            <p>Discover premium sports equipment across all categories. Find everything you need to elevate your game,
+                from professional gear to training essentials.</p>
         </div>
     </section>
 
@@ -1425,11 +1560,13 @@
             <!-- Badminton -->
             <div class="category-item" data-category="badminton">
                 <div class="category-image">
-                    <img src="https://media.istockphoto.com/id/1761333789/photo/badminton-shuttlecocks-and-racket-placed-in-the-corner-of-a-synthetic-field.jpg?s=612x612&w=0&k=20&c=3rr4BZqe1rDWsCe6LF_YPCXZe6Um5jizc6d6n96U1Q4=" alt="Badminton" loading="lazy">
+                    <img src="https://media.istockphoto.com/id/1761333789/photo/badminton-shuttlecocks-and-racket-placed-in-the-corner-of-a-synthetic-field.jpg?s=612x612&w=0&k=20&c=3rr4BZqe1rDWsCe6LF_YPCXZe6Um5jizc6d6n96U1Q4="
+                        alt="Badminton" loading="lazy">
                 </div>
                 <div class="category-content">
                     <h3>Badminton</h3>
-                    <p>High-performance rackets, precision shuttlecocks, and tournament-grade nets for players of all levels.</p>
+                    <p>High-performance rackets, precision shuttlecocks, and tournament-grade nets for players of all
+                        levels.</p>
                     <a href="badminton.html" class="btn">View Products</a>
                 </div>
             </div>
@@ -1437,7 +1574,8 @@
             <!-- Cricket -->
             <div class="category-item" data-category="cricket">
                 <div class="category-image">
-                    <img src="https://thumbs.dreamstime.com/b/dramatic-action-shot-cricket-player-man-white-clothes-striking-ball-golden-hour-match-highlighting-intensity-321650120.jpg" alt="Cricket" loading="lazy">
+                    <img src="https://thumbs.dreamstime.com/b/dramatic-action-shot-cricket-player-man-white-clothes-striking-ball-golden-hour-match-highlighting-intensity-321650120.jpg"
+                        alt="Cricket" loading="lazy">
                 </div>
                 <div class="category-content">
                     <h3>Cricket</h3>
@@ -1449,7 +1587,8 @@
             <!-- Ball Badminton -->
             <div class="category-item" data-category="ball-badminton">
                 <div class="category-image">
-                    <img src="https://www.shutterstock.com/image-photo/close-tennis-ball-racket-against-600nw-2330013801.jpg" alt="Ball Badminton" loading="lazy">
+                    <img src="https://www.shutterstock.com/image-photo/close-tennis-ball-racket-against-600nw-2330013801.jpg"
+                        alt="Ball Badminton" loading="lazy">
                 </div>
                 <div class="category-content">
                     <h3>Ball Badminton</h3>
@@ -1473,7 +1612,8 @@
             <!-- Accessories -->
             <div class="category-item" data-category="accessories">
                 <div class="category-image">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6n-rU3E4vpglZAlawSDM6it2AZYPTt1rYvg&s" alt="Accessories" loading="lazy">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6n-rU3E4vpglZAlawSDM6it2AZYPTt1rYvg&s"
+                        alt="Accessories" loading="lazy">
                 </div>
                 <div class="category-content">
                     <h3>Accessories</h3>
@@ -1550,7 +1690,8 @@
         <div class="footer-container">
             <div class="footer-col">
                 <h3>Hanuman Sports</h3>
-                <p>Mysore's premier destination for professional and amateur athletes. We're committed to helping you achieve your personal best through quality equipment and expert advice.</p>
+                <p>Mysore's premier destination for professional and amateur athletes. We're committed to helping you
+                    achieve your personal best through quality equipment and expert advice.</p>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
@@ -1591,7 +1732,8 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2023 Hanuman Sports. All Rights Reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary);"></i> for athletes</p>
+            <p>&copy; 2023 Hanuman Sports. All Rights Reserved. | Designed with <i class="fas fa-heart"
+                    style="color: var(--primary);"></i> for athletes</p>
         </div>
     </footer>
 
@@ -1646,7 +1788,7 @@
         if (mobileMenuBtn && mainNav) {
             mobileMenuBtn.addEventListener('click', () => {
                 mainNav.classList.toggle('active');
-                mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ? 
+                mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ?
                     '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
             });
         }
@@ -1658,15 +1800,15 @@
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 // Update active state and aria-pressed
-                filterBtns.forEach(b => { 
-                    b.classList.remove('active'); 
-                    b.setAttribute('aria-pressed', 'false'); 
+                filterBtns.forEach(b => {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-pressed', 'false');
                 });
                 btn.classList.add('active');
                 btn.setAttribute('aria-pressed', 'true');
-                
+
                 const filter = btn.getAttribute('data-filter');
-                
+
                 categoryItems.forEach(item => {
                     if (filter === 'all' || item.getAttribute('data-category') === filter) {
                         item.style.display = 'block';
@@ -1687,19 +1829,19 @@
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
+
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
                         top: targetElement.offsetTop - 100,
                         behavior: 'smooth'
                     });
-                    
+
                     // Close mobile menu if open
                     if (mainNav && mainNav.classList.contains('active')) {
                         mainNav.classList.remove('active');
@@ -1730,11 +1872,11 @@
         // Animation on scroll
         function animateOnScroll() {
             const elements = document.querySelectorAll('.category-item');
-            
+
             elements.forEach(element => {
                 const elementPosition = element.getBoundingClientRect().top;
                 const screenPosition = window.innerHeight / 1.2;
-                
+
                 if (elementPosition < screenPosition) {
                     element.style.opacity = '1';
                     element.style.transform = 'translateY(0)';
@@ -1761,15 +1903,15 @@
             profileBtn.addEventListener("click", function (e) {
                 e.preventDefault();
                 profileMenu.style.display =
-                profileMenu.style.display === "block" ? "none" : "block";
-           });
+                    profileMenu.style.display === "block" ? "none" : "block";
+            });
         }
 
         // Close dropdown when clicking outside
         document.addEventListener("click", function (e) {
             if (!e.target.closest(".profile-dropdown") && profileMenu) {
                 profileMenu.style.display = "none";
-            }  
+            }
         });
 
         // Cart Functionality
@@ -1810,7 +1952,7 @@
 
         function renderCartItems() {
             if (!cartItemsContainer || !cartTotalPrice) return;
-            
+
             if (cart.length === 0) {
                 cartItemsContainer.innerHTML = `
                     <div class="empty-cart">
@@ -1822,7 +1964,7 @@
                 cartTotalPrice.textContent = '₹0.00';
                 return;
             }
-            
+
             cartItemsContainer.innerHTML = cart.map(item => `
                 <div class="cart-item" data-id="${item.id}">
                     <div class="cart-item-image">
@@ -1842,11 +1984,11 @@
                     </div>
                 </div>
             `).join('');
-            
+
             // Calculate total
             const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
             cartTotalPrice.textContent = `₹${total.toLocaleString('en-IN')}`;
-            
+
             // Add event listeners to quantity buttons
             document.querySelectorAll('.decrease-quantity').forEach(button => {
                 button.addEventListener('click', () => {
@@ -1854,14 +1996,14 @@
                     updateCartItemQuantity(itemId, -1);
                 });
             });
-            
+
             document.querySelectorAll('.increase-quantity').forEach(button => {
                 button.addEventListener('click', () => {
                     const itemId = button.closest('.cart-item').getAttribute('data-id');
                     updateCartItemQuantity(itemId, 1);
                 });
             });
-            
+
             // Add event listeners to remove buttons
             document.querySelectorAll('.cart-item-remove').forEach(button => {
                 button.addEventListener('click', () => {
@@ -1873,14 +2015,14 @@
 
         function updateCartItemQuantity(itemId, change) {
             const itemIndex = cart.findIndex(item => item.id == itemId);
-            
+
             if (itemIndex !== -1) {
                 cart[itemIndex].quantity += change;
-                
+
                 if (cart[itemIndex].quantity < 1) {
                     cart.splice(itemIndex, 1);
                 }
-                
+
                 saveCart();
                 updateCartCount();
                 renderCartItems();
@@ -1950,17 +2092,17 @@
             searchForm.addEventListener('submit', (e) => {
                 e.preventDefault();
                 const query = searchInput.value.toLowerCase();
-                
+
                 if (query.trim() === '') {
                     searchResults.innerHTML = '<p class="no-results">Please enter a search term</p>';
                     return;
                 }
-                
-                const results = products.filter(product => 
-                    product.name.toLowerCase().includes(query) || 
+
+                const results = products.filter(product =>
+                    product.name.toLowerCase().includes(query) ||
                     product.category.toLowerCase().includes(query)
                 );
-                
+
                 displaySearchResults(results);
             });
         }
@@ -1970,7 +2112,7 @@
                 searchResults.innerHTML = '<p class="no-results">No products found. Try a different search term.</p>';
                 return;
             }
-            
+
             searchResults.innerHTML = results.map(product => `
                 <div class="search-result-item" data-id="${product.id}">
                     <img src="${product.image}" alt="${product.name}">
@@ -1981,13 +2123,13 @@
                     </div>
                 </div>
             `).join('');
-            
+
             // Add click event to search results
             document.querySelectorAll('.search-result-item').forEach(item => {
                 item.addEventListener('click', () => {
                     const productId = item.getAttribute('data-id');
                     const product = products.find(p => p.id == productId);
-                    
+
                     alert(`Redirecting to ${product.name} page...`);
                     searchModal.style.display = 'none';
                     overlay.style.display = 'none';
@@ -2007,5 +2149,7 @@
             });
         }
     </script>
+    <script src="hs-utils.js"></script>
 </body>
+
 </html>
